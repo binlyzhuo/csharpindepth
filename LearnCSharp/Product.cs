@@ -1,4 +1,6 @@
-﻿namespace LearnCSharp
+﻿using System.Collections.Generic;
+
+namespace LearnCSharp
 {
     using System;
     using System.Collections;
@@ -9,23 +11,23 @@
             this.name = name;
             this.price = price;
         }
-        private string name;
+        private readonly string name;
 
         public string Name
         {
             get { return name; }
         }
 
-        private decimal price;
+        private readonly decimal price;
 
         public decimal Price
         {
             get { return this.price; }
         }
 
-        public static ArrayList GetSampleProducts()
+        public static List<Product> GetSampleProducts()
         {
-            ArrayList list = new ArrayList();
+            var list = new List<Product>();
             list.Add(new Product("West side story", 9.9m));
             list.Add(new Product("Assassins", 14.9m));
             list.Add(new Product("Frogs", 13.99m));
