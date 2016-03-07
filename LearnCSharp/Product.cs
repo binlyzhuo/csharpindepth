@@ -1,37 +1,35 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace LearnCSharp
+﻿namespace LearnCSharp
 {
+    using System;
+    using System.Collections;
     public class Product
     {
-        private readonly string name;
+        public Product(string name, decimal price)
+        {
+            this.name = name;
+            this.price = price;
+        }
+        private string name;
 
         public string Name
         {
             get { return name; }
         }
 
-        private readonly decimal price;
+        private decimal price;
 
         public decimal Price
         {
-            get { return price; }
+            get { return this.price; }
         }
 
-        public Product(string name, decimal price)
+        public static ArrayList GetSampleProducts()
         {
-            this.name = name;
-            this.price = price;
-        }
-
-        public static List<Product> GetSampleProduct()
-        {
-            var list = new List<Product>();
-            list.Add(new Product("book", 100));
+            ArrayList list = new ArrayList();
+            list.Add(new Product("West side story", 9.9m));
+            list.Add(new Product("Assassins", 14.9m));
+            list.Add(new Product("Frogs", 13.99m));
+            list.Add(new Product("Sweeey", 10.99m));
             return list;
         }
 

@@ -9,7 +9,7 @@ namespace LearnCSharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Just Do it!!");
+            Console.WriteLine("Learn C# in depth!!");
             Console.ReadLine();
         }
     }
