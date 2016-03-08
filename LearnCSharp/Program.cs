@@ -32,6 +32,11 @@ namespace LearnCSharp
                 Console.WriteLine(p);
             }
 
+            int? num = 123;
+            int relNum = num.Value;
+
+            WordCountHelper.TestCount();
+
             //Print(products);
             Console.ReadKey();
         }
