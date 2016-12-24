@@ -35,6 +35,8 @@ namespace LearnCSharp
             int? num = 123;
             int relNum = num.Value;
 
+
+            // THINKING!!
             WordCountHelper.TestCount();
 
             //Print(products);
