@@ -11,7 +11,10 @@ namespace Chpt2
         private delegate void StringProcessor(string input);
         static void Main(string[] args)
         {
+            string[] strings = new string[5];
+            object[] objects = strings;
 
+            Console.ReadLine();
         }
     }
 }
