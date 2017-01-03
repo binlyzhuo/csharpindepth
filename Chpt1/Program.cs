@@ -12,7 +12,8 @@ namespace Chpt1
         static void Main(string[] args)
         {
             
-            Search();
+            //Search();
+            Linq();
             Console.ReadLine();
         }
 
@@ -58,6 +59,32 @@ namespace Chpt1
             foreach (var product in products.Where(p=>p.Price>10m))
             {
                 Console.WriteLine(product);
+            }
+        }
+
+
+        static void Linq()
+        {
+            var products = Product.GetSampleProducts();
+            var suppliers = Supplier.GetSampleSuppliers();
+            var filtered = from p in products
+                where p.Price > 10m
+                select p;
+            foreach (var product in filtered)
+            {
+                Console.WriteLine(product);
+            }
+
+            var filtered2 = from p in products
+                join s in suppliers
+                    on p.SupplierID equals s.SupplierID
+                where p.Price > 10m
+                orderby s.Name, p.Name
+                select new {SupplierName = s.Name, ProductName = p.Name};
+
+            foreach (var f in filtered2)
+            {
+                Console.WriteLine("Supplier={0},ProductName={1}",f.SupplierName,f.ProductName);
             }
         }
     }
