@@ -46,5 +46,13 @@ namespace Chpt3
                 Console.WriteLine("{0}:{1}",word,frequency);
             }
         }
+
+        static List<T> makeList<T>(T first, T second)
+        {
+            List<T> list = new List<T>();
+            list.Add(first);
+            list.Add(second);
+            return list;
+        } 
     }
 }
