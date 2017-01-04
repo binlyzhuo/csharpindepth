@@ -10,6 +10,11 @@ namespace Chpt4
     {
         static void Main(string[] args)
         {
+            Nullable<int> num = 100;
+            bool isHasValue = num.HasValue;
+            int? num2 = null;
+            int v = num.GetValueOrDefault();
+            Console.ReadLine();
         }
     }
 }
