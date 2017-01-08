@@ -65,6 +65,13 @@ namespace Chpt5
             {
                 Console.WriteLine(num);
             });
+
+            //
+        }
+
+        static void PredicateFun()
+        {
+            
         }
     }
 
