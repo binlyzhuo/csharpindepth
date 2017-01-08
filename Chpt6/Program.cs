@@ -25,6 +25,8 @@ namespace Chpt6
                 Console.WriteLine("Fetching Current...");
                 Console.WriteLine("..Current result:{0}",iterator.Current);
             }
+
+            //
             Console.ReadLine();
         }
 
