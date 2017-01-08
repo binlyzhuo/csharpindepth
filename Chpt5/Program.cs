@@ -16,6 +16,7 @@ namespace Chpt5
             SampleDelegate fac = new SampleDelegate(d.Method);
             fac("TEST");
             AnonymousDelegate();
+            PredicateFun();
             Console.ReadLine();
         }
 
@@ -71,7 +72,13 @@ namespace Chpt5
 
         static void PredicateFun()
         {
-            
+            Predicate<int> isEven = delegate(int x)
+            {
+                return x%2 == 0;
+            };
+
+            Console.WriteLine(isEven(1));
+            Console.WriteLine(isEven(2));
         }
     }
 
