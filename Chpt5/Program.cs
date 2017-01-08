@@ -9,11 +9,13 @@ namespace Chpt5
     class Program
     {
         private delegate void SampleDelegate(string x);
+
         static void Main(string[] args)
         {
             Dervied d = new Dervied();
             SampleDelegate fac = new SampleDelegate(d.Method);
             fac("TEST");
+            AnonymousDelegate();
             Console.ReadLine();
         }
 
@@ -25,6 +27,44 @@ namespace Chpt5
         static void KeyPressEvent(object sender, KeyPressEvent e)
         {
             Console.WriteLine("Key Press!!");
+        }
+
+        static void AnonymousDelegate()
+        {
+            Action<string> printReverse = delegate(string text)
+            {
+                char[] chars = text.ToCharArray();
+                Array.Reverse(chars);
+                Console.WriteLine(new string(chars));
+            };
+
+            Action<int> printRoot = delegate(int num)
+            {
+                Console.WriteLine(Math.Sqrt(num));
+            };
+
+            Action<IList<double>> printMean = delegate(IList<double> numbers)
+            {
+                double total = 0d;
+                total = numbers.Sum();
+                Console.WriteLine(total / numbers.Count);
+            };
+
+            //===========
+            // EXECUTING...
+            printReverse("Hello World");
+            printRoot(2);
+            printMean(new List<double>() {1,2,3,45,5,9});
+
+            //======================
+            List<int> numInts = new List<int>();
+            numInts.Add(1);
+            numInts.Add(2);
+
+            numInts.ForEach(delegate(int num)
+            {
+                Console.WriteLine(num);
+            });
         }
     }
 
