@@ -16,5 +16,15 @@ namespace Chpt5
         {
             Console.WriteLine("LogPlain");
         }
+
+        static void KeyPressEvent(object sender, KeyPressEvent e)
+        {
+            Console.WriteLine("Key Press!!");
+        }
+    }
+
+    public class KeyPressEvent : EventArgs
+    {
+        
     }
 }
