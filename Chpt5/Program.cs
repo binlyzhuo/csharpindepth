@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,6 +19,16 @@ namespace Chpt5
             fac("TEST");
             AnonymousDelegate();
             PredicateFun();
+
+            SortAndShowFiles("Sort by name:", delegate(FileInfo f1, FileInfo f2)
+            {
+                return f1.Name.CompareTo(f2.Name);
+            });
+
+            Func<string> print = delegate()
+            {
+                return "";
+            };
             Console.ReadLine();
         }
 
@@ -79,6 +91,29 @@ namespace Chpt5
 
             Console.WriteLine(isEven(1));
             Console.WriteLine(isEven(2));
+        }
+
+        static void SortAndShowFiles(string title, Comparison<FileInfo> sortOrder)
+        {
+            FileInfo[] files = new DirectoryInfo(@"D:\download").GetFiles();
+            Array.Sort(files,sortOrder);
+            Console.WriteLine(title);
+            foreach (var file in files)
+            {
+                Console.WriteLine("{0} ({1} bytes)",file.Name,file.Length);
+            }
+        }
+
+        static void EnclosingMethod()
+        {
+            int outVariable = 5;
+            string capturedVariable = "captured";
+            if (DateTime.Now.Hour == 23)
+            {
+                int normalLocalVariable = DateTime.Now.Minute;
+            }
+
+            //MethodInvoker
         }
     }
 
