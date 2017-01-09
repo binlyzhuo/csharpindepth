@@ -10,6 +10,10 @@ namespace Chpt9
     {
         static void Main(string[] args)
         {
+            Func<string, int> getLen = u => u.Length;
+            int len = getLen("get");
+            Console.WriteLine(len);
+            Console.ReadLine();
         }
     }
 }
