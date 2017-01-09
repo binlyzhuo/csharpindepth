@@ -10,6 +10,9 @@ namespace Chpt8
     {
         static void Main(string[] args)
         {
+            var person = new {Name = "Bin",Age = 10};
+            Console.WriteLine(person.GetType());
+            Console.ReadLine();
         }
     }
 }
