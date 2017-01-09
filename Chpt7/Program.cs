@@ -10,6 +10,8 @@ namespace Chpt7
     {
         static void Main(string[] args)
         {
+            PartialMethodDemo m = new PartialMethodDemo();
+            Console.ReadLine();
         }
     }
 }
