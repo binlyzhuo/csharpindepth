@@ -10,6 +10,12 @@ namespace Chpt10
     {
         static void Main(string[] args)
         {
+            var collect = Enumerable.Range(0, 10);
+            foreach (var i in collect)
+            {
+                Console.WriteLine(i);
+            }
+            Console.ReadLine();
         }
     }
 }
