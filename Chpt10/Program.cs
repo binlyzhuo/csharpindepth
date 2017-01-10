@@ -10,7 +10,7 @@ namespace Chpt10
     {
         static void Main(string[] args)
         {
-            var collect = Enumerable.Range(0, 10);
+            var collect = Enumerable.Range(0, 10).Reverse();
             foreach (var i in collect)
             {
                 Console.WriteLine(i);
