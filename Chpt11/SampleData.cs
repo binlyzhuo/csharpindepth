@@ -8,7 +8,7 @@ namespace Chpt11
 {
     public class SampleData
     {
-        public List<User> AddUsers()
+        public static List<User> AddUsers()
         {
             return new List<User>()
             {

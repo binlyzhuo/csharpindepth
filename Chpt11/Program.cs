@@ -16,6 +16,12 @@ namespace Chpt11
 
             Console.WriteLine(adultNames.Count());
 
+            var query = SampleData.AddUsers().Select(user => user);
+            foreach (var user in query)
+            {
+                Console.WriteLine(user);
+            }
+
             Console.ReadLine();
         }
     }
