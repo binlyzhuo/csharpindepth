@@ -12,6 +12,7 @@ namespace Chpt15.AsyncConsole
         static void Main(string[] args)
         {
             //==========
+            // 异步编程
             PrintPageLength();
             Console.ReadLine();
         }
