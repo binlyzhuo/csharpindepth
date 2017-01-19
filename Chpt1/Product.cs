@@ -32,7 +32,8 @@ namespace Chpt1
                 new Product() { Name = "West Side Story",Price = 9.99m, SupplierID = 10},
                 new Product() {Name = "Assassins",Price = 14.9m, SupplierID =10},
                 new Product() {Name = "Frogs",Price = 13.9m},
-                new Product() { Name = "Sweeney",Price = 10.9m}
+                new Product() { Name = "Sweeney",Price = 10.9m},
+                new Product(name:"Frogs",price:100m)
             };
         }
 
